@@ -1,50 +1,142 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./calc.css">
-    <script src="calc.js"></script>
-    <title>Basic Calculator</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Basic Calculator</title>
+  <link rel="stylesheet" href="./calc.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 </head>
+
 <body>
-    <h1>MMR Basic Calculator</h1>
-    <div class="container">
-        <form action="" name="form1">
-            <input type="" class="display" name="display">
-        </form>
-            <table>
-                <tr>
-                    <td><input type="button" class="btn" value="AC" onclick="clearScreen()"></td>
-                    <td><input type="button" class="btn" value="B" onclick="backspace()"></td>
-                    <td><input type="button" class="btn" value="/" onclick="insert('/')"></td>
-                    <td><input type="button" class="btn" value="X" onclick="insert('*')"></td>
-                </tr>
-                <tr>
-                    <td><input type="button" class="btn" value="7" onclick="insert(7)"></td>
-                    <td><input type="button" class="btn" value="8" onclick="insert(8)"></td>
-                    <td><input type="button" class="btn" value="9" onclick="insert(9)"></td>
-                    <td><input type="button" class="btn" value="-" onclick="insert('-')"></td>
-                </tr>
-                <tr>
-                    <td><input type="button" class="btn" value="4" onclick="insert(4)"></td>
-                    <td><input type="button" class="btn" value="5" onclick="insert(5)"></td>
-                    <td><input type="button" class="btn" value="6" onclick="insert(6)"></td>
-                    <td><input type="button" class="btn" value="+" onclick="insert('+')"></td>
-                </tr>
-                <tr>
-                    <td><input type="button" class="btn" value="1" onclick="insert(1)"></td>
-                    <td><input type="button" class="btn" value="2" onclick="insert(2)"></td>
-                    <td><input type="button" class="btn" value="3" onclick="insert(3)"></td>
-                    <td rowspan="2"><input type="button" class="btn" value="=" style="height: 185px;" onclick="equal()"></td>
-                </tr>
-                <tr>
-                    <td><input type="button" class="btn" value="00" onclick="insert(00)"></td>
-                    <td><input type="button" class="btn" value="0" onclick="insert(0)"></td>
-                    <td><input type="button" class="btn" value="." onclick="insert('.')"></td>
-                </tr>
-            </table>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Calculator</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+
+        </ul>
+        <div class="d-flex">
+          <a href="https://www.instagram.com/mystery_minnat_556/" target="_main"><img src="images/instagram.jpeg"
+              alt="instagram" class="sHandle"></a>
+          <a href="https://www.facebook.com/profile.php?id=100082452596728" target="_main"><img
+              src="images/facebook1.jpeg" alt="facebook" class="sHandle"></a>
+          <a href="https://www.linkedin.com/in/minnathullah-mohammed-06885b263/" target="_main"><img
+              src="images/linkedIn-logo.png" alt="linkedin" class="sHandle"></a>
+        </div>
+      </div>
     </div>
+  </nav>
+
+  <h1 class="text-center my-4" id="title">Minnat's Basic Calculator</h1>
+
+  <div class="container text-center my-4">
+    <div class="row g-2">
+      <div class="col-12">
+        <div class="p-5" id="display"></div>
+      </div>
+    </div>
+    <div class="row g-2">
+      <div class="col-3">
+        <div class="p-3" onclick="document.getElementById('display').innerText = '' ">CLR</div>
+      </div>
+      <div class="col-3" id="backspace" onclick="backspace()">
+        <div class="p-3">BKS</div>
+      </div>
+      <div class="col-3"
+        onclick="document.getElementById('display').innerText = document.getElementById('display').innerText + '/' ">
+        <div class="p-3">÷</div>
+      </div>
+      <div class="col-3"
+        onclick="document.getElementById('display').innerText = document.getElementById('display').innerText + '*' ">
+        <div class="p-3">X</div>
+      </div>
+    </div>
+    <div class="row g-2">
+      <div class="col-3"
+        onclick="document.getElementById('display').innerText = document.getElementById('display').innerText + 7">
+        <div class="p-3">7</div>
+      </div>
+      <div class="col-3"
+        onclick="document.getElementById('display').innerText = document.getElementById('display').innerText + 8">
+        <div class="p-3">8</div>
+      </div>
+      <div class="col-3"
+        onclick="document.getElementById('display').innerText = document.getElementById('display').innerText + 9">
+        <div class="p-3">9</div>
+      </div>
+      <div class="col-3"
+        onclick="document.getElementById('display').innerText = document.getElementById('display').innerText + '-' ">
+        <div class="p-3">-</div>
+      </div>
+    </div>
+    <div class="row g-2">
+      <div class="col-3"
+        onclick="document.getElementById('display').innerText = document.getElementById('display').innerText + 4">
+        <div class="p-3">4</div>
+      </div>
+      <div class="col-3"
+        onclick="document.getElementById('display').innerText = document.getElementById('display').innerText + 5">
+        <div class="p-3">5</div>
+      </div>
+      <div class="col-3"
+        onclick="document.getElementById('display').innerText = document.getElementById('display').innerText + 6">
+        <div class="p-3">6</div>
+      </div>
+      <div class="col-3"
+        onclick="document.getElementById('display').innerText = document.getElementById('display').innerText + '+' ">
+        <div class="p-3">+</div>
+      </div>
+    </div>
+    <div class="row g-2">
+      <div class="col-9">
+        <div class="row g-2">
+          <div class="col-4"
+            onclick="document.getElementById('display').innerText = document.getElementById('display').innerText + 1">
+            <div class="p-3">1</div>
+          </div>
+          <div class="col-4"
+            onclick="document.getElementById('display').innerText = document.getElementById('display').innerText + 2">
+            <div class="p-3">2</div>
+          </div>
+          <div class="col-4"
+            onclick="document.getElementById('display').innerText = document.getElementById('display').innerText + 3">
+            <div class="p-3">3</div>
+          </div>
+        </div>
+        <div class="row g-2">
+          <div class="col-8"
+            onclick="document.getElementById('display').innerText = document.getElementById('display').innerText + 0">
+            <div class="p-3">0</div>
+          </div>
+          <div class="col-4"
+            onclick="document.getElementById('display').innerText = document.getElementById('display').innerText + '.' ">
+            <div class="p-3">.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-3"
+        onclick="equalTo()">=</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <script src="calc.js"></script>
 </body>
+
 </html>

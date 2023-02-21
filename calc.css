@@ -1,43 +1,64 @@
-*{
-    background-color: antiquewhite;
+body{
+    background-color: azure;
 }
-.container{
-    height: 650px;
-    width:400px ;
-    border: 5px solid black;
-    margin-left: 500px;
+.sHandle{
+    height: 40px;
+    width: 60px;
+    border: none;
+    border-radius: 0;
+    display: inline;
+    padding-left: 20px;
 }
-table{
-    height: 500px;
-    width: 340px;
-    margin-left: 40px;
-    margin-top: 20px;
-  
+
+.col-3{
+    border: 1px solid black;
+    background-color: skyblue;
 }
-.btn{
-    height: 70px;
-    width: 50px;
-    font-size: 25px;
-    background-color:dimgrey;
+.col-3:hover{
+    cursor: pointer;
+    background-color: red;
     color: white;
-    border-radius: 10px;
 }
-.display{
-    margin-left: 40px;
-    height: 65px;
-    width: 300px;
-    border: 6px solid black;
-    /* background-color:rgb(153, 244, 26); */
-    background-color:white;
-    margin-top: 50px;
+
+.col-12{
+    border: 1px solid black;
+    background-color: rgb(76, 75, 75);
+    color: white;
+    font-size: 35px !important;
 }
-h1{
-    font-size: 40px;
-    padding-left: 500px;
-    background-color: cornflowerblue;
-    color: brown;
+.col-4{
+    border: 1px solid black;
+    background-color: lightgreen;
 }
-.btn:hover{
-    background-color: black;
-    cursor:pointer;
+.col-4:hover{
+    cursor: pointer;
+    background-color: red;
+    color: white;
+}
+
+.col-8{
+    border: 1px solid black;
+    background-color: lightsalmon;
+}
+.col-8:hover{
+    cursor: pointer;
+    background-color: red;
+    color: white;
+}
+
+.row{
+    font-size: 25px;
+}
+
+.container{
+    max-width: 500px !important;
+}
+
+#title{
+   text-shadow: 2px 2px 5px red;
+}
+
+#display{
+    text-align: start !important;
+    word-wrap:break-word;
 }
